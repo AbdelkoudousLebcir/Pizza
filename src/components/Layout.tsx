@@ -19,6 +19,8 @@ const Layout: React.FC<LayoutProps> = ({ children, activePage, onPageChange }) =
         return 'Staff Management';
       case 'ingredients':
         return 'Ingredient Management';
+      case 'what-if':
+        return 'What-If Simulator';
       default:
         return 'Dashboard';
     }

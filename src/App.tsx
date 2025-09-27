@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import MenuManagement from './pages/MenuManagement';
 import StaffManagement from './pages/StaffManagement';
 import IngredientsManagement from './pages/IngredientsManagement';
+import WhatIfSimulator from './pages/WhatIfSimulator';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('dashboard');
@@ -19,6 +20,8 @@ function App() {
         return <StaffManagement />;
       case 'ingredients':
         return <IngredientsManagement />;
+      case 'what-if':
+        return <WhatIfSimulator />;
       default:
         return <Dashboard />;
     }

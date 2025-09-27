@@ -5,7 +5,8 @@ import {
   Carrot, 
   Users, 
   Settings, 
-  LogOut 
+  LogOut,
+  Calculator
 } from 'lucide-react';
 import logo from '../logo.png';
 
@@ -53,6 +54,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage, onPageChange }) => {
             <Users className="nav-icon" />
             Staff
           </button>
+          <button 
+            className={`nav-item ${activePage === 'what-if' ? 'active' : ''}`}
+            onClick={() => onPageChange('what-if')}
+          >
+            <Calculator className="nav-icon" />
+            What-If Simulator
+          </button>
         </div>
         
         <div className="sidebar-nav-footer">
@@ -64,6 +72,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage, onPageChange }) => {
             <LogOut className="nav-icon" />
             Log Out
           </button>
+
         </div>
       </nav>
     </div>
