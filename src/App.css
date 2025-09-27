@@ -307,6 +307,9 @@ input, textarea, select {
 
 /* Staff Management Styles */
 .staff-management {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -328,8 +331,94 @@ input, textarea, select {
 .staff-card {
   background-color: #ffffff;
   border-radius: 12px;
-  padding: 20px;
+  padding: 24px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Staff Management Specific Styles */
+.config-list, .assignment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.config-item, .assignment-item {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.config-date, .assignment-date {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.025em;
+}
+
+.shift-section, .shift-assignment {
+  margin-bottom: 12px;
+}
+
+.shift-section:last-child, .shift-assignment:last-child {
+  margin-bottom: 0;
+}
+
+.shift-name, .shift-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  margin: 0 0 8px 0;
+}
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.role-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-size: 12px;
+}
+
+.role-item:hover {
+  background-color: #f8f9fa;
+  border-color: #E23A00;
+}
+
+.role-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.role-count {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #E23A00;
+}
+
+.role-people {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
 }
 
 .card-header {
@@ -955,6 +1044,7 @@ input, textarea, select {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
+  align-items: stretch;
 }
 
 .order-forecasting-card {
@@ -1041,6 +1131,55 @@ input, textarea, select {
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.most-selling-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pie-chart-container {
+  margin: 20px 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pie-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.pie-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.pie-legend .legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-percentage {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
 }
 
 /* Pizza Detail Page Styles */
