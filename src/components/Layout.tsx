@@ -11,16 +11,16 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, activePage, onPageChange }) => {
   const getPageTitle = (page: string) => {
     switch (page) {
+      case 'dashboard':
+        return 'Dashboard';
       case 'menu':
         return 'Menu Management';
       case 'staff':
         return 'Staff Management';
       case 'ingredients':
         return 'Ingredient Management';
-      case 'dashboard':
-        return 'Dashboard';
       default:
-        return 'Menu Management';
+        return 'Dashboard';
     }
   };
 

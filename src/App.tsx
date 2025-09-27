@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import './App.css';
 import Layout from './components/Layout';
+import Dashboard from './pages/Dashboard';
 import MenuManagement from './pages/MenuManagement';
 import StaffManagement from './pages/StaffManagement';
 import IngredientsManagement from './pages/IngredientsManagement';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('menu');
+  const [currentPage, setCurrentPage] = useState('dashboard');
 
   const renderPage = () => {
     switch (currentPage) {
+      case 'dashboard':
+        return <Dashboard />;
       case 'menu':
         return <MenuManagement />;
       case 'staff':
         return <StaffManagement />;
       case 'ingredients':
         return <IngredientsManagement />;
-      case 'dashboard':
-        return <div>Dashboard page coming soon...</div>;
       default:
-        return <MenuManagement />;
+        return <Dashboard />;
     }
   };
 
